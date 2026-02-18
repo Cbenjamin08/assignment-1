@@ -12,7 +12,8 @@ public class CubicFormula {
         double c = keyboard.nextDouble();
         System.out.println("Please enter a nonzero d value:");
         double d = keyboard.nextDouble();
-        double discriminant = 18 * a * b * c * d - 4 * b * b * b * d + b * b - 4 * a * c * c * c - 27 * a * a * d * d;
+        keyboard.close();
+        double discriminant = 18 * a * b * c * d - 4 * b * b * b * d + b * b * c * c - 4 * a * c * c * c - 27 * a * a * d * d;
         double var1 = (b * c) / (6 * a * a) - d / (2 * a) - (b * b * b) / (27 * a * a * a);
         double var2 = Math.pow(c / (3 * a) - (b * b) / (9 * a * a), 3);
         double root1 = Math.cbrt(var1 + Math.sqrt(Math.pow(var1, 2) + var2))
