@@ -19,9 +19,17 @@ public class CubicFormula {
 
         double root1;
         double root2;
+        double p = (3*a*c - b*b) / (3*a*a);
+        System.out.println(p);
+        double q = (2*b*b*b - 9*a*b*c + 27*a*a*d) / (27*a*a*a);
+        System.out.println(q);
+        double t = b / (3*a);
+
 
         if (discriminant > 0) {
             System.out.println("There is 3 distinct real roots");
+            root1 = 2 * Math.sqrt(-(p/3)) * Math.cos((1/3) * Math.acos(((3*q) / (2*p)) * Math.sqrt(-3/p)) - (2*Math.PI*1) / 3) + t;
+            System.out.println(root1);
         } else if (discriminant == 0) {
             if (b * b == 3 * a * c) {
                 System.out.println("There is a triple root at " + -(b / (3 * a)));
@@ -38,6 +46,7 @@ public class CubicFormula {
             System.out.println("Root: " + root1);
             System.out.println("As well as 2 complex conjugate roots");
         }
-
+        
+        
     }
 }
